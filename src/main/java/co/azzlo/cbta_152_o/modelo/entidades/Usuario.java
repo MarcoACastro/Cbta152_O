@@ -6,6 +6,8 @@
 package co.azzlo.cbta_152_o.modelo.entidades;
 
 import java.io.Serializable;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,16 +21,19 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Azz
+ * @author Marco Antonio Castro Ramirez
  */
 @Entity
 @Table(name = "USUARIO")
 @XmlRootElement
+@Named
+@RequestScoped
 @NamedQueries({
     @NamedQuery(name = "Usuario.findAll", query = "SELECT u FROM Usuario u")
     , @NamedQuery(name = "Usuario.findByIdUsuario", query = "SELECT u FROM Usuario u WHERE u.idUsuario = :idUsuario")
     , @NamedQuery(name = "Usuario.findByPassword", query = "SELECT u FROM Usuario u WHERE u.password = :password")
-    , @NamedQuery(name = "Usuario.findByFechaCreacion", query = "SELECT u FROM Usuario u WHERE u.fechaCreacion = :fechaCreacion")})
+    , @NamedQuery(name = "Usuario.findByFechaCreacion", query = "SELECT u FROM Usuario u WHERE u.fechaCreacion = :fechaCreacion")
+    , @NamedQuery(name = "Usuario.findUSUARIO", query = "SELECT u FROM Usuario u WHERE u.idUsuario = :idUsuario AND u.password = :pasword")})
 public class Usuario implements Serializable {
 
     private static final long serialVersionUID = 1L;

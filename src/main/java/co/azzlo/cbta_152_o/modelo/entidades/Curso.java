@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 /**
  *
- * @author Azz
+ * @author Marco Antonio Castro Ramirez
  */
 @Entity
 @Table(name = "CURSO")
