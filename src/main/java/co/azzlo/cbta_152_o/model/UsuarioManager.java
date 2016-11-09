@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package co.azzlo.cbta_152_o.modelo.entidades;
+package co.azzlo.cbta_152_o.model;
 
 import javax.ejb.Stateless;
 
